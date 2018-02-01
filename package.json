@@ -1,0 +1,27 @@
+{
+  "name": "SDC-Rider-Service",
+  "version": "1.0.0",
+  "babel": {
+    "plugins": [
+      "transform-async-to-generator",
+      "transform-es2015-modules-commonjs"
+    ]
+  },
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "koa": "^2.0.0-alpha.8",
+    "koa-router": "^7.1.1",
+    "redis": "^2.8.0"
+  }
+}
