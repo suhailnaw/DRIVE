@@ -10,7 +10,7 @@ const app = new Router();
 // });
 
 app.post('/PMO', async (ctx) => {
-  ctx.body = 'fuck off';
+  ctx.body = 'hello';
   //update Redis with new PMO
   //send to Cassandra for storage
 })
