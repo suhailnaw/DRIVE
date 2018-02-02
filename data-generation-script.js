@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-var writeStream = fs.createWriteStream('test-output3.csv');
+var writeStream = fs.createWriteStream('mock_data/test-output3.csv');
 
 var startTime = 1514764800;
 var endTime = 1514851200;
