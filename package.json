@@ -20,6 +20,8 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "cassandra-driver": "^3.3.0",
+    "faker": "^4.1.0",
     "koa": "^2.0.0-alpha.8",
     "koa-router": "^7.1.1",
     "redis": "^2.8.0"

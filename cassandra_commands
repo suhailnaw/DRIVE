@@ -1,0 +1,47 @@
+cassandra -f
+
+CREATE KEYSPACE drive WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor': 3};
+
+DESCRIBE keyspaces;
+
+USE drive;
+
+CREATE TABLE riderLog2 (
+  riderId int PRIMARY KEY,
+  start list<float>,
+  end list<float>,
+  time1 int,
+  price float,
+  time2 int,
+  accept boolean,
+  time3 int
+);
+
+CREATE TABLE riderLog3 (
+  riderId int,
+  start list<float>,
+  end list<float>,
+  time1 int,
+  price float,
+  time2 int,
+  accept boolean,
+  time3 int,
+  PRIMARY KEY (riderId, time1, time2, time3)
+);
+
+DESCRIBE tables;
+
+SELECT * FROM riderLog;
+
+SELECT riderId FROM riderLog WHERE accept=true;
+SELECT riderId FROM riderLog WHERE time1>1514764900 and time1<1514765000 ALLOW FILTERING;
+
+SELECT riderId FROM riderLog WHERE time1>1517356780 ALLOW FILTERING;
+
+COPY riderLog3(riderId, start, end, time1, price, time2, accept, time3) from '/Users/suHAILnaw/Documents/Hack Reactor/DRIVE/mock_data/test-output2.csv' WITH DELIMITER = ';';
+
+
+i + ',' + JSON.stringify(start) + ',' + JSON.stringify(end) + ',' + time1 + ',' + price + ',' + time2 + ',' + accept + ',' + time3 + '\n'
+
+// jan01 = 1514764800
+// jan31 = 1517356800
